@@ -1,43 +1,125 @@
-// ignore_for_file: deprecated_member_use
+// // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-import 'package:navi/bottomSheet.dart';
+import 'My Account Screen/body.dart';
+import 'My Account Screen//Navigation.dart';
+
 
 void main() {
-  runApp(MyApp());
+
+ runApp(MyApp());
+
 }
 
-class MyApp extends StatelessWidget {
 
+
+class MyApp extends StatelessWidget{
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Navi App",
-      debugShowCheckedModeBanner: false,
-      home: homeScreen(),
-    );
+  Widget  build(BuildContext context){
+
+return MaterialApp(
+
+ title:'First App',
+ debugShowCheckedModeBanner: false,
+ home: ProfileScreen(),
+
+
+);
+
   }
 }
 
-class homeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      //appBar: AppBar(title: Text("TEST"),),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(height: 50,width: 20,),
-            const TextField(
-              decoration: InputDecoration(labelText: "Title",),
-              ),
-            Container(child: bottomSheet()),
-          ],
-        ),
-      ),
-    );
-  }
+
+
+
+
+
+class ProfileScreen extends StatelessWidget{
+
+ int _selectedIndex =  4;
+ 
+  
+  void onTapped(int index){
+    setState(){
+       _selectedIndex = index;
+    };
+  
+  } 
+ 
+ @override
+ Widget build(BuildContext context){
+  return Scaffold(
+
+  body: Body() ,
+  
+  bottomNavigationBar: BottomNavigationBar(items: [
+
+    BottomNavigationBarItem(icon:Icon(Icons.home),label:'Home'),
+    BottomNavigationBarItem(icon:Icon(Icons.event),label:'Event'),
+    BottomNavigationBarItem(icon:Icon(Icons.bookmark),label:'Saved'),
+    BottomNavigationBarItem(icon:Icon(Icons.newspaper),label:'News'),
+    BottomNavigationBarItem(icon:Icon(Icons.person),label:'Account'),
+ ],
+ currentIndex: _selectedIndex,
+ selectedItemColor:Colors.redAccent,
+ unselectedItemColor:Colors.black ,
+ 
+ ),
+  
+  
+  
+  );
+
+  
+
+
+
+return Body();
+ }
+ 
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import 'package:flutter/material.dart';
+
+
+
+// class homeScreen extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       //appBar: AppBar(title: Text("TEST"),),
+//       body: SingleChildScrollView(
+//         child: Column(
+//           children: [
+//             SizedBox(height: 50,width: 20,),
+//             const TextField(
+//               decoration: InputDecoration(labelText: "Title",),
+//               ),
+//             Container(child: bottomSheet()),
+//           ],
+//         ),
+//       ),
+//     );
+//   }
+// }
 
 
   

@@ -60,9 +60,13 @@ Widget build(BuildContext context){
                           padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 45),
                           backgroundColor: Colors.grey,
                         ),
-                        child:const Text('Trips'),
-                      ),  
-                    ),
+                        child:const Text('Trips',
+                                     style: TextStyle(
+                                    color: Colors.black,
+                               ),
+                            ),
+                          ),  
+                        ),
                   Container(
                     margin:const EdgeInsets.fromLTRB(30, 0, 0, 0),
                     child:
