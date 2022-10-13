@@ -42,12 +42,12 @@ Widget build(BuildContext context){
                   color: Colors.black,
                 ),
                 ),
-                // Padding(
-                // padding: const EdgeInsets.all(8),
-                // child: 
+                Padding(
+                padding: const EdgeInsets.all(8),
+                child: 
                 Container(
                   color: Colors.white,
-                  margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                  margin: const EdgeInsets.fromLTRB(0, 0, 200, 0),
                   padding: EdgeInsets.fromLTRB(0,0,0,0),
                   child: Row(
                   children:[
@@ -76,14 +76,16 @@ Widget build(BuildContext context){
                           padding: const EdgeInsets.symmetric(horizontal: 40,vertical: 45),
                           backgroundColor: Colors.grey,
                         ),
-                        child:const Text('Share'),
+                        child:const Text('Share',
+                                    style: TextStyle(
+                                    color: Colors.black,),),
                       ),  
                     ),
                   
                   ],
                   ),
                 ),
-                //),
+                ),
               ],
             ),
           ),
